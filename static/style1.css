@@ -1,0 +1,155 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('{{ url_for('static', filename='background.jpg') }}'); /* Link to the background image */
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Keeps the image fixed while scrolling */
+  background-color: rgba(0, 0, 0, 0.2); /* Adds a subtle tint with transparency */
+  flex-direction: column;
+}
+
+.header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+  font-size: 1.5rem;
+  width: 100%;  /* Full width for small screens */
+  max-width: 600px;  /* Match the quiz body's max-width */
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.quiz-body {
+  width: 100%;
+  max-width: 600px;  /* Keeps it responsive */
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+
+.option-block {
+  padding: 10px;
+  background: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.option-block:hover {
+  background: #e2e2e2;
+}
+
+.option-block.correct {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.option-block.wrong {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.explanation {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+button {
+  width: 100px;
+}
+
+.correct {
+  background-color: green;
+  color: rgb(3, 3, 3);
+}
+
+.wrong {
+  background-color: red;
+  color: rgb(15, 15, 15);
+}
+
+.icon-wrong {
+  color: red;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+#answer-status {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  display: none;
+}
+
+#answer-status.correct {
+  color: green;
+}
+
+#answer-status.wrong {
+  color: red;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+  body {
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .header {
+    font-size: 1.2rem;
+    padding: 10px;
+    text-align: center;
+    width: auto;
+    max-width: 600px;
+    margin-bottom: 10px;
+  }
+
+  .quiz-body {
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  button {
+    width: 90px;
+  }
+
+  .option-block {
+    font-size: 0.9em;
+  }
+}
+
+/* For very small screens (extra small devices) */
+@media (max-width: 400px) {
+  body {
+    padding: 5px;
+  }
+
+  .header {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .quiz-body {
+    max-width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+  }
+
+  button {
+    width: 80px;
+  }
+}
