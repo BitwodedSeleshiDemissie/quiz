@@ -4,11 +4,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-image: url('{{ url_for('static', filename='background.jpg') }}'); /* Link to the background image */
-  background-size: cover; /* Ensures the image covers the entire screen */
-  background-position: center; /* Centers the image */
-  background-attachment: fixed; /* Keeps the image fixed while scrolling */
-  background-color: rgba(0, 0, 0, 0.2); /* Adds a subtle tint with transparency */
+  background-color: #f8f9fa;
   flex-direction: column;
 }
 
@@ -34,7 +30,6 @@ body {
   padding: 20px;
   overflow-y: auto;
 }
-
 
 .option-block {
   padding: 10px;

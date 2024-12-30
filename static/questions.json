@@ -95,7 +95,7 @@
         "options": {
             "A)": "To avoid interference between broadcasts of users sharing a broadcast channel assign  \nto each user a predetermined time interval in which to transmit",
             "B)": "They do not implement any prior  checking to avoid interference between user transmissions  \nwho share a broadcast channel;  only in the case of interference (collision) is action taken by repeating the  \ntransmission after a fixed delay",
-            "C)": "They do not implement any prior checking to avoid in terference between user transmissions  \nwho share a broadcast channel;  \nonly in the case of interference (collision) is it intervened, repeating the transmission after a random delay"
+            "C)": "They do not implement any prior chsecking to avoid in terference between user transmissions  \nwho share a broadcast channel;  \nonly in the case of interference (collision) is it intervened, repeating the transmission after a random delay"
         },
         "correct_answer": "N/A",
         "comment": "Aloha has low efficiency because the nodes transmit without coordinating with each other, only in \nthe \nIn the event of a collision, a backoff is performed: the two (or more) stations that have collided wait for a time  \nrandom before retransmitting the PDU.  The random time serves to break the determin ism and if in the case the  \ntwo (or more) stations waited for the same time, a collision with probability 1 would again occur. In  \nthis case doubles the maximum random waiting time."
